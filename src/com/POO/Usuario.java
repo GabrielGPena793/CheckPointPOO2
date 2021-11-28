@@ -32,13 +32,4 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    public LocalDate getDataRegistro() {
-        return dataRegistro;
-    }
-
-    public void setDataRegistro(LocalDate dataRegistro) {
-        this.dataRegistro = dataRegistro;
-    }
-
-
 }

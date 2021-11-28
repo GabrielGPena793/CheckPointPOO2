@@ -1,15 +1,8 @@
 package com.POO;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Agendamento {
 
     private int dia, mes, hora;
-    private List<Cliente> users = new ArrayList<>();
-    private List<Tatuagem> tatuagems = new ArrayList<>();
-
 
     public Agendamento(int dia, int mes, int hora) {
         this.dia = dia;

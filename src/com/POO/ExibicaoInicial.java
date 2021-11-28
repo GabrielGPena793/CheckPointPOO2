@@ -7,7 +7,7 @@ public class ExibicaoInicial implements IExibicaoInicial {
     MenuExibicao menuExibicao = new MenuExibicao();
     Usuario user = new Cliente();
 
-    public ExibicaoInicial(){};
+    public ExibicaoInicial(){}
 
     public void telaInicial(){
         Scanner scanner = new Scanner(System.in);
@@ -72,7 +72,4 @@ public class ExibicaoInicial implements IExibicaoInicial {
 
         System.out.println("Cadastro realizado com sucesso!");
     }
-
-
-
 }

@@ -1,9 +1,9 @@
 package com.POO;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class ExibirPefil {
+
     Scanner scanner = new Scanner(System.in);
     ServicoPerfil servicoPerfil = new ServicoPerfil();
 
@@ -32,7 +32,7 @@ public class ExibirPefil {
     }
 
     public void telaAtualizarDados(Usuario user){
-        int escolha = 0;
+        int escolha;
 
         do {
             System.out.println("---------------------");

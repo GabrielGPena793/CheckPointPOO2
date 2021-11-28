@@ -1,6 +1,5 @@
 package com.POO;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class ServicoPerfil {
@@ -8,7 +7,7 @@ public class ServicoPerfil {
 
     public void atualizarDados(int escolha, Usuario user){
 
-        int idade = 0;
+        int idade;
         String mudanca;
         switch (escolha) {
             case 1 -> {

@@ -1,17 +1,12 @@
 package com.POO;
 
-import java.util.List;
-
 public class SevicosUsuario {
 
-    public SevicosUsuario(){};
+    public SevicosUsuario(){}
 
     public boolean verificarLogin(String email, String senha, Usuario user){
 
-        if (user.getEmail() != null){
-            return true;
-        }
-        return false;
+        return email.equals(user.getEmail()) && senha.equals(user.getSenha());
 
     }
 

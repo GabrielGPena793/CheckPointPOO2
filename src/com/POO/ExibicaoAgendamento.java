@@ -7,8 +7,6 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
     Tatuagem tatuagem = new Tatuagem();
     Agendamento agendamento = new Agendamento();
     Scanner scanner = new Scanner(System.in);
-
-
     ServicoAgendamento servicoAgendamento = new ServicoAgendamento();
 
     @Override
@@ -17,10 +15,11 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
 
         while (escolha != 3) {
             System.out.println("---------------------");
-            System.out.println("Menu Agendamento, Digite: \n" +
-                    "1 - Fazer Agendamento \n" +
-                    "2 - Detalhes do Agendamento \n" +
-                    "3 - Sair do agendamento");
+            System.out.println("""
+                    Menu Agendamento, Digite:\s
+                    1 - Fazer Agendamento\s
+                    2 - Detalhes do Agendamento\s
+                    3 - Sair do agendamento""");
             System.out.println("---------------------");
 
             escolha = scanner.nextInt();
