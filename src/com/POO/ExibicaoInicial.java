@@ -1,5 +1,6 @@
 package com.POO;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExibicaoInicial implements IExibicaoInicial {
@@ -9,9 +10,10 @@ public class ExibicaoInicial implements IExibicaoInicial {
 
     public ExibicaoInicial(){}
 
-    public void telaInicial(){
+    public void telaInicial() throws InputMismatchException {
         Scanner scanner = new Scanner(System.in);
         int opacao = 0;
+
         while (opacao != 3) {
             System.out.println("---------------------");
             System.out.println("""
@@ -28,20 +30,30 @@ public class ExibicaoInicial implements IExibicaoInicial {
                 this.telaCadastro();
             } else if(opacao == 3) {
                 System.out.println("Programa encerrado!");
+            }else if(opacao > 3) {
+                System.out.println("Digite um número entre 1 a 3");
             }
         }
     }
 
     public void telaLogin(){
         Scanner scanner = new Scanner(System.in);
+        String email, senha;
 
-        System.out.println("---------------------");
-        System.out.println("Digite seu email:");
-        String email = scanner.nextLine();
+        do {
+            System.out.println("---------------------");
+            System.out.println("Digite seu email:");
+            email = scanner.nextLine();
 
-        System.out.println("Digite sua senha:");
-        String senha = scanner.nextLine();
-        System.out.println("---------------------");
+            System.out.println("Digite sua senha:");
+            senha = scanner.nextLine();
+            System.out.println("---------------------");
+
+            if (email.equals("") || senha.equals("")){
+                System.out.println("Não pode haver campos vazios!");
+        }
+
+        }while (email.equals("") || senha.equals(""));
 
         boolean login = sevicosUsuario.verificarLogin(email, senha, this.user);
 
@@ -56,17 +68,19 @@ public class ExibicaoInicial implements IExibicaoInicial {
 
     public void telaCadastro(){
         Scanner scanner = new Scanner(System.in);
+        String email, senha, nome,genero;
+        int idade;
 
         System.out.println("Digite seu email:");
-        String email = scanner.nextLine();
+        email = scanner.nextLine();
         System.out.println("Digite sua senha:");
-        String senha = scanner.nextLine();
+        senha = scanner.nextLine();
         System.out.println("Digite seu nome:");
-        String nome = scanner.nextLine();
+        nome = scanner.nextLine();
         System.out.println("Digite seu gênero:");
-        String genero = scanner.nextLine();
+        genero = scanner.nextLine();
         System.out.println("Digite sua idade:");
-        int idade = scanner.nextInt();
+        idade = scanner.nextInt();
 
         sevicosUsuario.cadastrar(email, senha, nome, genero, idade, this.user);
 

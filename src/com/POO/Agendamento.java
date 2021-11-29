@@ -1,32 +1,26 @@
 package com.POO;
 
+import java.time.LocalDate;
+
 public class Agendamento {
 
-    private int dia, mes, hora;
+    private LocalDate data;
+    private int hora;
 
-    public Agendamento(int dia, int mes, int hora) {
-        this.dia = dia;
-        this.mes = mes;
+    public Agendamento(LocalDate data, int hora) {
+        this.data = data;
         this.hora = hora;
     }
 
     public Agendamento() {
     }
 
-    public int getDia() {
-        return dia;
+    public LocalDate getData() {
+        return data;
     }
 
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
-
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
+    public void setData(LocalDate data) {
+        this.data = data;
     }
 
     public int getHora() {

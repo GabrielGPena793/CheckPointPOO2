@@ -1,5 +1,7 @@
 package com.POO;
 
+import java.time.LocalDate;
+
 public class ServicoAgendamento {
     ServicoTatuagem servicoTatuagem = new ServicoTatuagem();
 
@@ -13,14 +15,9 @@ public class ServicoAgendamento {
             default -> System.out.println("Escolha uma opção válida!");
         }
 
-        agendamento.setDia(dia);
-        agendamento.setMes(mes);
+        agendamento.setData(LocalDate.of(2021, mes, dia));
         agendamento.setHora(hora);
 
 
     }
-
-
-
-
 }

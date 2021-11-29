@@ -1,5 +1,6 @@
 package com.POO;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class ExibicaoAgendamento implements IExibicaoAgendamento{
@@ -28,7 +29,7 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
                 this.telaAgendamento();
             }
 
-            if (escolha == 2 && agendamento.getDia() > 0) {
+            if (escolha == 2 && agendamento.getData()!= null ){
                 this.telaDeatalhesAgendamento();
             }else if (escolha == 2){
                 System.out.println("Você ainda não tem um agendamento marcado");
@@ -67,9 +68,9 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
         //Dados agenda
         System.out.println("---------------------");
         System.out.println("informe a data do agendamento:");
-        System.out.println("Dia");
+        System.out.println("Dia:");
         int dia = scanner.nextInt();
-        System.out.println("Mês");
+        System.out.println("Mês:");
         int mes = scanner.nextInt();
         System.out.println("Hora");
         int hora = scanner.nextInt();
@@ -98,7 +99,7 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
         System.out.println("---------------------");
         System.out.println("Tatuagem : " + tatuagem.getTamanho() +
                 "\nEstilo: " + tatuagem.getTipo() +
-                "\nData: " + agendamento.getDia() + "/" + agendamento.getMes() + "" +
+                "\nData: " + agendamento.getData().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) +
                 "\nHora: " + agendamento.getHora() + " horas"+
                 "\nPreço: R$" + preco);
         System.out.println("---------------------");
