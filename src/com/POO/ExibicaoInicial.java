@@ -10,7 +10,7 @@ public class ExibicaoInicial implements IExibicaoInicial {
 
     public ExibicaoInicial(){}
 
-    public void telaInicial() throws InputMismatchException {
+    public void telaInicial() throws InputMismatchException { // responsavel por dar opções iniciais do app
         Scanner scanner = new Scanner(System.in);
         int opacao = 0;
 
@@ -25,9 +25,9 @@ public class ExibicaoInicial implements IExibicaoInicial {
             opacao = scanner.nextInt();
 
             if (opacao == 1) {
-                this.telaLogin();
+                this.telaLogin(); // chamando a função responsavel por mostar a tela de login
             } else if (opacao == 2) {
-                this.telaCadastro();
+                this.telaCadastro(); // chamando a função responsavel por mostar a tela de cadastro
             } else if(opacao == 3) {
                 System.out.println("Programa encerrado!");
             }else if(opacao > 3) {
@@ -36,7 +36,7 @@ public class ExibicaoInicial implements IExibicaoInicial {
         }
     }
 
-    public void telaLogin(){
+    public void telaLogin(){ // responsavel por printar o menu de login
         Scanner scanner = new Scanner(System.in);
         String email, senha;
 
@@ -55,7 +55,7 @@ public class ExibicaoInicial implements IExibicaoInicial {
 
         }while (email.equals("") || senha.equals(""));
 
-        boolean login = sevicosUsuario.verificarLogin(email, senha, this.user);
+        boolean login = sevicosUsuario.verificarLogin(email, senha, this.user); // chamando a função responsavel por verificar se está cadastrado
 
         if (login){
             System.out.println("Login efetuado com sucesso!");
@@ -66,7 +66,7 @@ public class ExibicaoInicial implements IExibicaoInicial {
 
     }
 
-    public void telaCadastro(){
+    public void telaCadastro(){ // responsavel por printar o menu de cadastro
         Scanner scanner = new Scanner(System.in);
         String email, senha, nome,genero;
         int idade;
@@ -82,7 +82,7 @@ public class ExibicaoInicial implements IExibicaoInicial {
         System.out.println("Digite sua idade:");
         idade = scanner.nextInt();
 
-        sevicosUsuario.cadastrar(email, senha, nome, genero, idade, this.user);
+        sevicosUsuario.cadastrar(email, senha, nome, genero, idade, this.user); // chamando a função responsavel por cadastrar o cliente
 
         System.out.println("Cadastro realizado com sucesso!");
     }

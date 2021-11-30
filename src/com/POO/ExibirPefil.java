@@ -7,7 +7,7 @@ public class ExibirPefil {
     Scanner scanner = new Scanner(System.in);
     ServicoPerfil servicoPerfil = new ServicoPerfil();
 
-    public void telaPerfil(Usuario user){
+    public void telaPerfil(Usuario user){ // responsavel por mostar o menu de perfil
         int escolha = 0;
 
         while (escolha != 3) {
@@ -22,16 +22,16 @@ public class ExibirPefil {
             escolha = scanner.nextInt();
 
             if (escolha == 1) {
-                this.telaAtualizarDados(user);
+                this.telaAtualizarDados(user); // chamando a função que irá mostrar a tela de atualização
             } else if (escolha == 2) {
-                this.telaDetalhesDados(user);
+                this.telaDetalhesDados(user); // chamando a função que irá mostrar a tela de detalhes
             } else if(escolha == 3) {
                 System.out.println("Voltando para o menu");
             }
         }
     }
 
-    public void telaAtualizarDados(Usuario user){
+    public void telaAtualizarDados(Usuario user){ // responavel por mostrar a tela de atualização
         int escolha;
 
         do {
@@ -46,7 +46,7 @@ public class ExibirPefil {
             System.out.println("---------------------");
             escolha = scanner.nextInt();
 
-            servicoPerfil.atualizarDados(escolha, user);
+            servicoPerfil.atualizarDados(escolha, user); // chamando a função responsavel por atuallizar os dados
 
             System.out.println("Perfil atualizado com sucesso!");
 
@@ -61,7 +61,7 @@ public class ExibirPefil {
         }while (escolha != 2);
     }
 
-    public void telaDetalhesDados(Usuario user){
+    public void telaDetalhesDados(Usuario user){ // responsável por mostara a tela de detalhes
 
         System.out.println("---------------------");
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ServicoPerfil {
     Scanner scanner = new Scanner(System.in);
 
-    public void atualizarDados(int escolha, Usuario user){
+    public void atualizarDados(int escolha, Usuario user){ // responsavel por atualizar os dados do cliente
 
         int idade;
         String mudanca;

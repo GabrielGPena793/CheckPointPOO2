@@ -11,7 +11,7 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
     ServicoAgendamento servicoAgendamento = new ServicoAgendamento();
 
     @Override
-    public void telaAgenda() {
+    public void telaAgenda() { // Responsavel por mostrar a tela de agenda
         int escolha = 0;
 
         while (escolha != 3) {
@@ -26,11 +26,11 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
             escolha = scanner.nextInt();
 
             if (escolha == 1) {
-                this.telaAgendamento();
+                this.telaAgendamento(); // chamando a função responsavel por mostar a tela de agendamento
             }
 
             if (escolha == 2 && agendamento.getData()!= null ){
-                this.telaDeatalhesAgendamento();
+                this.telaDeatalhesAgendamento(); // chamando a função responsavel por mostar a tela de detalhes do agendamento
             }else if (escolha == 2){
                 System.out.println("Você ainda não tem um agendamento marcado");
             }
@@ -43,7 +43,7 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
     }
 
     @Override
-    public void telaAgendamento() {
+    public void telaAgendamento() { // Responsavel por mostrar a tela de agendamento da tatuagem
 
         //dados da tatuagem
         System.out.println("---------------------");
@@ -76,14 +76,14 @@ public class ExibicaoAgendamento implements IExibicaoAgendamento{
         int hora = scanner.nextInt();
         System.out.println("---------------------");
 
-        servicoAgendamento.agendar(tamanho, tipo, dia, mes, hora, tatuagem, agendamento);
+        servicoAgendamento.agendar(tamanho, tipo, dia, mes, hora, tatuagem, agendamento); // chamando a função responsavel para o agendamento
 
         System.out.println("Agendamento feito com sucesso!");
 
     }
 
     @Override
-    public void telaDeatalhesAgendamento() {
+    public void telaDeatalhesAgendamento() {  // Responsavel por printar todos os dados do agendamento
 
         double preco = 0;
         if (tatuagem.getTamanho().equals("Grande")){

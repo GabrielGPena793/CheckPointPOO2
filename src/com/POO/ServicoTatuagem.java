@@ -2,6 +2,7 @@ package com.POO;
 
 public class ServicoTatuagem {
 
+    // responsavel por fazer o calculo das tatuagens Tribal
     public void precoTribal(int tamanho, Tatuagem tatuagem){
 
         if (tamanho == 1){
@@ -21,6 +22,7 @@ public class ServicoTatuagem {
         }
     }
 
+    // responsavel por fazer o calculo das tatuagens OldSchool
     public void precoOldSchool(int tamanho, Tatuagem tatuagem){
 
         if (tamanho == 1){
@@ -42,6 +44,7 @@ public class ServicoTatuagem {
         }
     }
 
+    // responsavel por fazer o calculo das tatuagens NewSchool
     public void precoNewSchool(int tamanho, Tatuagem tatuagem){
 
         if (tamanho == 1){
@@ -64,6 +67,7 @@ public class ServicoTatuagem {
 
     }
 
+    // responsavel por fazer o calculo das tatuagens padrão
     public void precoPadrao( int tamanho, Tatuagem tatuagem){
 
         if (tamanho == 1){
