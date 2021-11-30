@@ -28,7 +28,7 @@ pequena vai ser o preço padrão mais 25 reais ;
 média vai  ser o preço padrão mais 75 reais;
 grande vai  ser o preço padrão mais 120 reais;
 
-![CheckPoint- POO.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e20ab0b-6f86-4469-ae1e-60557cdfea5a/CheckPoint-_POO.png)
+![CheckPoint- POO](https://user-images.githubusercontent.com/86542760/144125784-8d766ff7-97be-491d-9188-a04a2d08cf87.png)
 
 - Coloquei novas classes para delegar a responsabilidade de cada parte no meu código em suas devidas classes.
 - Imagiando em um app, criei as telas de Exibição começando com a tela inicial, tela de menu e a partir do menu o usuário vai ter duas opões de escolha se vai para tela de perfil ou para tela de agendamento.
