@@ -28,8 +28,10 @@ pequena vai ser o preço padrão mais 25 reais ;
 média vai  ser o preço padrão mais 75 reais;
 grande vai  ser o preço padrão mais 120 reais;
 
+## Diagrama
 ![CheckPoint- POO](https://user-images.githubusercontent.com/86542760/144125784-8d766ff7-97be-491d-9188-a04a2d08cf87.png)
 
+### Notas de observação
 - Coloquei novas classes para delegar a responsabilidade de cada parte no meu código em suas devidas classes.
 - Imagiando em um app, criei as telas de Exibição começando com a tela inicial, tela de menu e a partir do menu o usuário vai ter duas opões de escolha se vai para tela de perfil ou para tela de agendamento.
 - A responsabilidade das telas de exibição é apenas exibir as opções para o cliente e a partir das decições que o cliente fizer, será chamado a função de outra classe que é responsavel por fazer o serviço escolhido
