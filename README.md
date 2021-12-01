@@ -6,7 +6,7 @@
 
   Ele pede para que no aplicativo tenha um agendamento para os clientes marcarem as tatuagens com ele, nesse agendamento contenha os detalhes de orçamento de cada tatuagem e os dados do cliente.
 
-  Para isso o **cliente** tem que informar **email, senha, nome, sobrenome, gênero e idade** para se cadastrar e fazer login no aplicativo**,** o **aplicativo** tem que registrar o **agendamento, conter os dados do cliente  e dados do orçamento**, e a **tatuagem** tem um **tamanho, tipo da tatuagem e um preço padrão de acordo com o tamanho:**
+  Para isso o **cliente** tem que informar **email, senha, nome, sobrenome, gênero e idade** para se cadastrar e fazer login no aplicativo, o **aplicativo** tem que registrar o **agendamento, conter os dados do cliente  e dados do orçamento**, e a **tatuagem** tem um **tamanho, tipo da tatuagem e um preço padrão de acordo com o tamanho:**
 
 - **preço padrão:**
 pequena R$80,00;
